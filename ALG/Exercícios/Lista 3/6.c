@@ -1,5 +1,6 @@
 #include <stdio.h>
 #include <stdlib.h>
+#include <ctype.h>
 
 void main() 
 {
@@ -9,14 +10,14 @@ void main()
     printf("insira total: ");
     scanf("%i", &total);
 
-    for (int i = 0; i<=total; i++) {
+    for (int i = 0; i<total; i++) {
         char sexo; 
         float altura;
         printf("\nInsira sexo e altura %i: ", i+1);
-        scanf("%c %i", &sexo, &altura);
+        scanf("%i %c", &altura, &sexo);
 
-        if (sexo == 'm') {
-            if (altura > maior_m) {
+        if (toupper(sexo) == 'M') {
+            if (altura >= maior_m) {
                 maior_m = altura;
             }
         } else {
