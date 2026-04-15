@@ -1,6 +1,5 @@
 #include <stdio.h>
 #include <stdlib.h>
-#include "bsort.h"
 
 void main() 
 {
