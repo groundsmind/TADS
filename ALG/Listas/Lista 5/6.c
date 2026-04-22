@@ -1,6 +1,15 @@
 #include <stdio.h>
 #include <stdlib.h>
 
+/*
+Faça um programa que leia 30 números em um vetor. Em seguida, deve informar:
+● a média de todos os valores;
+● quais valores estão acima da média, e suas respectivas posições;
+● quantos estão acima da média;
+● a soma dos números acima da média;
+● a porcentagem dos números acima da média em relação ao total de números
+*/
+
 void main() 
 {
     int arr_size = 30;

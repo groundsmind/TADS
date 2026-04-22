@@ -1,6 +1,14 @@
 #include <stdio.h>
 #include <stdlib.h>
 
+/*
+Escreva um programa que leia um vetor de tamanho 30. A seguir, inverta o vetor da
+seguinte maneira: troque o primeiro elemento com o último, o segundo elemento com
+o penúltimo, etc., até chegar ao meio do vetor. Defina a solução de maneira genérica,
+de modo a funcionar para qualquer vetor de capacidade n. Por fim, mostre na tela o
+vetor invertido
+*/
+
 void main() 
 {
     int arr_size = 6;

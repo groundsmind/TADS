@@ -3,6 +3,15 @@
 #include <stdint.h>
 #include <inttypes.h>
 
+/*
+Faça um algoritmo que gere os N primeiros elementos da série de Fibonacci,
+armazene-os num vetor, e por fim mostre a série gerada. Nessa série, os dois primeiros
+elementos são 1 e 1. A partir do terceiro, os elementos são gerados a partir da soma
+dos dois anteriores. Por exemplo, numa série com N= 9, temos: (1, 1, 2, 3, 5, 8, 13,
+21, 34). Defina um vetor com capacidade 50 e garanta que o usuário não entre com N
+> 50
+*/
+
 void main() 
 {
     fibonacci();
