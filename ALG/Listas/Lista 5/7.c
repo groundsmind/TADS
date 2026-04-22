@@ -20,10 +20,8 @@ void main()
         scanf("%i", &arr[i]);
     }
 
-    int half_size = arr_size / 2;
     int j = arr_size-1;
-
-    for (int i = 0; i < half_size; i++)
+    for (int i = 0; i < arr_size / 2; i++)
     {
         arr[j] = arr[i] ^ arr[j];
         arr[i] = arr[j] ^ arr[i];
