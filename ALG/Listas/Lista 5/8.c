@@ -1,5 +1,6 @@
 #include <stdio.h>
 #include <stdlib.h>
+// deu overflow dai precisa fazer um int de 64 bit // 
 #include <stdint.h>
 #include <inttypes.h>
 
@@ -29,6 +30,7 @@ void fibonacci()
         fibonacci();
     }
 
+    // array de int de 64bit
     uint64_t arr[arr_size];
     arr[0] = arr[1] = 1;
     
@@ -42,6 +44,7 @@ void fibonacci()
     {
         char comma = ',';
         if (i==arr_size-1) {comma = ' ';}
+        // pelo jeito pode fazer isso ??
         printf("%" PRId64 "%c ", arr[i], comma);
     }
     exit(EXIT_SUCCESS);
