@@ -115,6 +115,7 @@ void filtrar_midia(int filtro)
     else if (filtro == 11842)
     {
         printf("NOPE");
+        printf("\nHereditary");
     }
     else if (filtro == 11831)
     {
@@ -123,10 +124,6 @@ void filtrar_midia(int filtro)
     else if (filtro == 21023)
     {
         printf("Loki");
-    }
-    else if (filtro == 11842)
-    {
-        printf("Hereditary");
     }
     else if (filtro == 21834)
     {
