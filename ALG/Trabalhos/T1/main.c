@@ -1,36 +1,38 @@
 #include <stdio.h>
 #include <stdlib.h>
 
-/*
+/* Tabela de filmes e séries:
 
-Tabela de filmes e séries:
+┏━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┳━━━━━━┳━━━━━━━━━┳━━━━━━━━━━━┳━━━━━━━━━━━┓
+┃               Título               ┃ Tipo ┃ Censura ┃ Categoria ┃ Streaming ┃
+┣━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━╋━━━━━━╋━━━━━━━━━╋━━━━━━━━━━━╋━━━━━━━━━━━┫
+┃"Everything Everywhere All At Once" ┃  01  ┃   +18   ┃     1     ┃     2     ┃
+┃"Good Omens"                        ┃  02  ┃   +10   ┃     3     ┃     1     ┃
+┃"Whiplash"                          ┃  01  ┃   +18   ┃     2     ┃     1     ┃
+┃"Friends"                           ┃  02  ┃   +10   ┃     3     ┃     1     ┃
+┃"NOPE"                              ┃  01  ┃   +18   ┃     4     ┃     2     ┃
+┃"Scott Pilgrim Vs. The World"       ┃  01  ┃   +18   ┃     3     ┃     1     ┃
+┃"Loki"                              ┃  02  ┃   +10   ┃     2     ┃     3     ┃
+┃"Hereditary"                        ┃  01  ┃   +18   ┃     4     ┃     2     ┃
+┃"Smiling Friends"                   ┃  02  ┃   +18   ┃     3     ┃     4     ┃
+┃"A Minecraft Movie"                 ┃  01  ┃    0    ┃     3     ┃     2     ┃
+┗━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┻━━━━━━┻━━━━━━━━━┻━━━━━━━━━━━┻━━━━━━━━━━━┛
 
-|------------------------------------|------|---------|-----------|-----------|
-|               Título               | Tipo | Censura | Categoria | Streaming |
-|------------------------------------|------|---------|-----------|-----------|
-|"Everything Everywhere All At Once" |  01  |   +18   |     1     |     2     |
-|"Good Omens"                        |  02  |   +10   |     3     |     1     |
-|"Whiplash"                          |  01  |   +18   |     2     |     1     |
-|"Friends"                           |  02  |   +10   |     3     |     1     |
-|"NOPE"                              |  01  |   +18   |     4     |     2     |
-|"Scott Pilgrim Vs. The World"       |  01  |   +18   |     3     |     1     |
-|"Loki"                              |  02  |   +10   |     2     |     3     |
-|"Hereditary"                        |  01  |   +18   |     4     |     2     |
-|"Smiling Friends"                   |  02  |   +18   |     3     |     4     |
-|"A Minecraft Movie"                 |  01  |    0    |     3     |     2     |
-|------------------------------------|------|---------|-----------|-----------|
+┏━━ Tipo:
+┣ 1 - Filme
+┗ 2 - Série
 
-Categoria:
-1 - Ação
-2 - Drama
-3 - Comédia
-4 - Terror
+┏━━ Categoria:
+┣ 1 - Ação
+┣ 2 - Drama
+┣ 3 - Comédia
+┗ 4 - Terror
 
-Streaming:
-1 - Netflix
-2 - Prime Video
-3 - Disney+
-4 - HBO Max
+┏━ Streaming:
+┣ 1 - Netflix
+┣ 2 - Prime Video
+┣ 3 - Disney+
+┗ 4 - HBO Max
 
 */
 
