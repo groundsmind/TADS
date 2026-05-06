@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>AGT-T1</title>
+  <style>
+  @import url("https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.9.0-alpha2/katex.min.css");
+
+  body {
+    font-family: Georgia, Cambria, serif;
+    font-size: 14px;
+    line-height: 1.7;
+    color: #373D49;
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 2rem;
+  }
+  h1, h2, h3, h4, h5, h6 {
+    font-family: "Source Sans Pro", "Helvetica Neue", Helvetica, Arial, sans-serif;
+    font-weight: 600;
+    margin-top: 1.5em;
+    margin-bottom: 0.5em;
+  }
+  h1 { font-size: 2em; }
+  h2 { font-size: 1.5em; }
+  h3 { font-size: 1.25em; }
+  a { color: #35D7BB; text-decoration: none; }
+  a:hover { text-decoration: underline; }
+  code {
+    font-family: "Ubuntu Mono", Monaco, monospace;
+    background: #F5F7FA;
+    padding: 0.2em 0.4em;
+    border-radius: 3px;
+  }
+  pre {
+    background: #F5F7FA;
+    padding: 1em;
+    border-radius: 3px;
+    overflow-x: auto;
+  }
+  .hljs {
+    display: block;
+    overflow-x: auto;
+    padding: 0;
+    color: #333;
+  }
+  pre code { background: none; padding: 0; }
+  blockquote {
+    border-left: 3px solid #A0AABF;
+    padding-left: 1em;
+    margin-left: 0;
+    font-style: italic;
+    color: #666;
+  }
+  table {
+    border-collapse: collapse;
+    width: 100%;
+  }
+  th, td {
+    border: 1px solid #E8E8E8;
+    padding: 0.5em;
+    text-align: left;
+  }
+  th {
+    background: #F5F7FA;
+    font-weight: 600;
+  }
+  #preview .table {
+    width: auto;
+  }
+  img {
+    max-width: 100%;
+    height: auto;
+  }
+  .katex-display {
+    overflow-x: auto;
+    overflow-y: hidden;
+  }
+</style>
+</head>
+<body id="preview">
+<h2 class="code-line has-line-data" data-line-start="0" data-line-end="1"><a id="Ideia_0"></a>Ideia</h2>
+<p class="has-line-data" data-line-start="1" data-line-end="2">Dada a natureza peculiar das restrições desse trabalho, decidi encarar o problema atribuindo à cada título um ID de 5 dígitos, composto de:</p>
+<table class="table table-striped table-bordered">
+<thead>
+<tr>
+<th>Dígito</th>
+<th>Peso</th>
+<th>Função</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Primeiro</td>
+<td>(x10.000)</td>
+<td>Filme (1) ou série (2)</td>
+</tr>
+<tr>
+<td>Segundo e terceiro</td>
+<td>(x100)</td>
+<td>Censura/classificação indicativa (00, 10, 18)</td>
+</tr>
+<tr>
+<td>Quarto</td>
+<td>(x10)</td>
+<td>Categoria; Ação, drama, comédia, terror (1 a 4, respectivamente)</td>
+</tr>
+<tr>
+<td>Quinto</td>
+<td>(x1)</td>
+<td>Plataforma disponível; Netflix, Prime Video, Disney+, HBO Max (1 a 4, respectivamente)</td>
+</tr>
+</tbody>
+</table>
+<p class="has-line-data" data-line-start="9" data-line-end="10">Como exemplo, o filme <em>Whiplash</em> possui o código <strong>11821</strong>:</p>
+<ul>
+<li class="has-line-data" data-line-start="10" data-line-end="11">Filme: 1 * 10000 = 10000</li>
+<li class="has-line-data" data-line-start="11" data-line-end="12">classificação +18: 18 * 100 = 1800</li>
+<li class="has-line-data" data-line-start="12" data-line-end="13">Drama: 2 * 10 = 20</li>
+<li class="has-line-data" data-line-start="13" data-line-end="14">disponível na Netflix: 1 * 1 = 1</li>
+</ul>
+<blockquote>
+<p class="has-line-data" data-line-start="14" data-line-end="15">10000 + 1800 + 20 + 1 = 11821</p>
+</blockquote>
+<h2 class="code-line has-line-data" data-line-start="16" data-line-end="17"><a id="Execuo_16"></a>Execução</h2>
+<p class="has-line-data" data-line-start="17" data-line-end="18">Já que o código em <em>VisuAlg</em> funciona de maneira idêntica, comentarei apenas a respeito da minha execução do algoritmo em <em>C</em>, de linha a linha (considerando comentários):</p>
+<ul>
+<li class="has-line-data" data-line-start="19" data-line-end="22"><strong>Linhas 39-44</strong><br>
+A Seção <code>main()</code>, que é rodada quando o programa é inicializado atribui à variável <code>escolha_usuário</code> o resultado da função <code>escolher_filtros()</code>;<br>
+Chama a função <code>filtrar_midia()</code>utilizando <code>escolha_usuário</code> como parâmetro;</li>
+</ul>
+<blockquote>
+<p class="has-line-data" data-line-start="22" data-line-end="23">Não se espera que a função <code>main()</code>, e, subsequentemente, <code>filtrar_midia()</code>, retornem qualquer valor, visto que a saída no terminal é o objetivo final. Assim, foram declaradas com retorno <code>void</code> para clareza.</p>
+</blockquote>
+<ul>
+<li class="has-line-data" data-line-start="24" data-line-end="27"><strong>Linhas 46-92</strong><br>
+Função <code>escolher_filtros()</code>, recebe do usuário os filtros desejados um a um, tendo contingências para possíveis erros de entrada. Mais especificamente, números fora do esperado chamam a função novamente, e retornam a nova escolha;<br>
+Cada escolha possui seus “pesos” multiplicados à entrada, vide seção <strong>Ideia</strong> acima.</li>
+</ul>
+<blockquote>
+<p class="has-line-data" data-line-start="27" data-line-end="28">Apenas duas variáveis são declaradas: <code>escolha</code>, que recebe a soma de todos os dígitos do ID, e <code>temp</code>, que recebe a entrada do usuário. Essas variáveis são reutilizadas pela função, dado que seria desnecessário reservar mais espaço na memória para valores que seriam feitos inúteis após seu propósito poucas linhas depois.</p>
+</blockquote>
+<ul>
+<li class="has-line-data" data-line-start="29" data-line-end="33"><strong>Linhas 94-139</strong><br>
+Função <code>filtrar_midia</code>, recebe como parâmetro o filtro e imprime na tela a mídia com ID igual, checando caso por caso utilizando numerosos comandos <code>if-else if-else</code>;<br>
+Filmes e séries com ID iguais são apresentados juntos;<br>
+Caso o filtro não possua correspondente, a função simplesmente imprime <em>“Nenhum filme/série encontrado a partir desse filtro.”</em></li>
+</ul>
+<blockquote>
+<p class="has-line-data" data-line-start="33" data-line-end="34">Esse design torna a “lista” facilmente expansível, precisando apenas de mais uma entrada <code>else if</code> para cada título novo.</p>
+</blockquote>
+
+</body>
+</html>
