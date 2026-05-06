@@ -45,44 +45,44 @@ int escolher_filtros()
 {
     int escolha, temp;
     
-    printf("tipo");
+    printf("tipo:\n");
     scanf("%i", &temp);
-    if ((temp != 1) || (temp != 2))
+    if ((temp != 1) && (temp != 2))
     {
-        printf("Tipo deve ser 1 ou 2!");
+        printf("\n\nTipo deve ser 1 ou 2!\n");
         escolha = escolher_filtros();
         return escolha;
     }
     escolha += temp * 10000;
 
 
-    printf("censura");
+    printf("censura:\n");
     scanf("%i", &temp);
-    if ((temp != 0) || (temp != 10) || (temp != 18))
+    if ((temp != 0) && (temp != 10) && (temp != 18))
     {
-        printf("Censura deve ser 0, 10 ou 18!");
+        printf("\n\nCensura deve ser 0, 10 ou 18!");
         escolha = escolher_filtros();
         return escolha;
     }
     escolha += temp * 100;
 
 
-    printf("categoria");
+    printf("categoria:\n");
     scanf("%i", &temp);
-    if ((temp >= 1) || (temp <= 4))
+    if ((temp < 1) || (temp > 4))
     {
-        printf("Categoria deve ser de 1 a 4!");
+        printf("\n\nCategoria deve ser de 1 a 4!");
         escolha = escolher_filtros();
         return escolha;
     }
     escolha += temp * 10;
 
 
-    printf("streaming");
+    printf("streaming:\n");
     scanf("%i", &temp);
-    if ((temp >= 1) || (temp <= 4))
+    if ((temp < 1) || (temp > 4))
     {
-        printf("Streaming deve ser de 1 a 4!");
+        printf("\n\nStreaming deve ser de 1 a 4!");
         escolha = escolher_filtros();
         return escolha;
     }
