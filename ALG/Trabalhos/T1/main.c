@@ -55,7 +55,6 @@ int escolher_filtros()
     }
     escolha += temp * 10000;
 
-
     printf("censura:\n");
     scanf("%i", &temp);
     if ((temp != 0) && (temp != 10) && (temp != 18))
@@ -65,7 +64,6 @@ int escolher_filtros()
         return escolha;
     }
     escolha += temp * 100;
-
 
     printf("categoria:\n");
     scanf("%i", &temp);
@@ -77,7 +75,6 @@ int escolher_filtros()
     }
     escolha += temp * 10;
 
-
     printf("streaming:\n");
     scanf("%i", &temp);
     if ((temp < 1) || (temp > 4))
@@ -87,7 +84,6 @@ int escolher_filtros()
         return escolha;
     }
     escolha += temp;
-
 
 
     return escolha;
