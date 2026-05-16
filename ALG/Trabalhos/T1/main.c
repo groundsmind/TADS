@@ -101,14 +101,11 @@ void filtrar_midia(int filtro)
     else if (filtro == 21031)
     {
         printf("Good Omens");
+        printf("Friends");
     }
     else if (filtro == 11821)
     {
         printf("Whiplash");
-    }
-    else if (filtro == 21031)
-    {
-        printf("Friends");
     }
     else if (filtro == 11842)
     {
