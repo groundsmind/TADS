@@ -1,16 +1,39 @@
 #include <stdio.h>
+#include <stdlib.h>
 
 void main()
 {
-    int tx = 5;
-    int ty = 5;
-    int mtx[tx][ty];
+    int w = 3;
+    int h = 4;
+    int a[w][h];
+    int b[h][w];
+    int c[h][h];
 
-    for (int i = 0; i < tx; i++)
-    {   for (int j = 0; j < ty; i++)
+    for (int y = 0; y<w; y++)
+    {   for (int x=0; x<h; x++)
         {
-            printf("Insira valor na posição (%i, %i)", i, j);
-            scanf("%i", &mtx[i][j]);
+            int temp;
+            printf("[A] Insira número na posição (%i, %i)", x, y);
+            scanf("%i", &temp);
+            a[x][y] = temp;
+        }
+
+    }
+
+    for (int y = 0; y<h; y++)
+    {   for (int x=0; x<w; x++)
+        {
+            int temp;
+            printf("[B] Insira número na posição (%i, %i)", x, y);
+            scanf("%i", &temp);
+            b[x][y] = temp;
+        }
+    }
+
+    for (int y = 0; y<h; y++) { for (int x=0; x<h; x++) { for (int z=0; z<h; z++)
+            {
+                c[x][y] = a[z][0]*b[0][z];
+            }
         }
     }
 }

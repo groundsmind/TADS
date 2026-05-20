@@ -1,16 +1,36 @@
 #include <stdio.h>
+#include <stdlib.h>
 
 void main()
 {
-    int tx = 5;
-    int ty = 5;
-    int mtx[tx][ty];
+    int w = 5;
+    int h = 5;
+    int a[w][h];
 
-    for (int i = 0; i < tx; i++)
-    {   for (int j = 0; j < ty; i++)
+    for (int y = 0; y<w; y++)
+    {   for (int x=0; x<h; x++)
         {
-            printf("Insira valor na posição (%i, %i)", i, j);
-            scanf("%i", &mtx[i][j]);
+            int temp;
+            printf("[A] Insira número na posição (%i, %i)", x, y);
+            scanf("%i", &temp);
+            a[x][y] = temp;
         }
     }
+
+    int max = 0;
+    int l = 0;
+    for (int y = 0; y<w; y++)
+    {   for (int x=0; x<h; x++)
+        {
+            if (a[x][y] > max) {max=a[x][y]; l=x;}
+        }
+    }
+
+    int b = INT_MIN;
+    for (int y = 0; y<w; y++)
+    {
+        if (a[l][y] > b) {b=a[l][y];}
+    }
+
+    printf("Minimax: %i", b);
 }
