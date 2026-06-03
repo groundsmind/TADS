@@ -1,6 +1,5 @@
 Algoritmo "triangulo"
 Var
-// Seção de Declarações das variáveis 
    v1,v2,v3, t: real
 
 funcao tipo_triangulo(x,y,z:real): inteiro
@@ -25,12 +24,12 @@ Inicio
       
       t <- tipo_triangulo(v1,v2,v3)
       
-      escreval("Triângulo é ")
+      escreval("TriÃ¢ngulo ")
       escolha t
       caso 1
-           escreva("Equilátero")
+           escreva("EquilÃ¡tero")
       caso 2
-           escreva("Isóceles")
+           escreva("IsÃ³celes")
       caso 3
             escreva("Escaleno")
       fimescolha
