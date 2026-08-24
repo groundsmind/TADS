@@ -1,0 +1,5 @@
+Crie um struct.
+A struct deve ter pelo menos um campo do tipo int, flot, string e outra struct pre-definida.
+Crie uma função para inserir um vetor do tipo da struct definida.
+Crie uma função para mostrar um vetor do tipo da struct definida.
+Para isso, crie uma bilbioteca.
